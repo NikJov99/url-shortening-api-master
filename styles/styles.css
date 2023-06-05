@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  all: unset;
+  background-color: hsl(180, 66%, 49%);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  margin: 0.5rem;
+  color: #fff;
+  transition: 0.15s ease;
+}
+button:hover {
+  cursor: pointer;
+  background-color: hsl(180, 92%, 75%);
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: hsl(0, 0%, 93%);
+}
+
+header {
+  width: 90vw;
+  margin: 1rem auto;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav .mobile-menu-button {
+  all: unset;
+  background-image: url(../images/menu-icon.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 30px;
+  width: 30px;
+}
+header nav .mobile-menu-button:hover {
+  cursor: pointer;
+}
+header nav .mobile-submenu-container {
+  position: relative;
+}
+header nav .mobile-submenu-container .mobile-submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 90vw;
+  border-radius: 10px;
+  margin: 2rem 0;
+  padding: 2rem;
+  text-align: center;
+  line-height: 3rem;
+  background-color: hsl(257, 27%, 26%);
+}
+header nav .mobile-submenu-container .mobile-submenu hr {
+  margin: 1.5rem 0;
+  border: none;
+  height: 1px;
+  background-color: hsl(257, 7%, 63%);
+}
+header nav .mobile-submenu-container .mobile-submenu ul {
+  list-style: none;
+}
+header nav .mobile-submenu-container .mobile-submenu ul a {
+  text-decoration: none;
+  color: #fff;
+}
+header nav .mobile-submenu-container .mobile-submenu ul a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+header nav .mobile-submenu-container .mobile-submenu ul button {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border-radius: 10px;
+}
+header nav .mobile-submenu-container .mobile-submenu-active {
+  display: block;
+}
+header nav .desktop-nav {
+  display: none;
+}
+
+main {
+  width: 90vw;
+  margin: 1rem auto;
+}
+main .introduction {
+  margin: 3rem auto;
+  text-align: center;
+}
+main .introduction img {
+  display: inline-block;
+  width: 90%;
+  margin: 1rem auto;
+}
+main .links-container .link-input-container {
+  background-image: url(../images/bg-shorten-mobile.svg);
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-color: hsl(257, 27%, 26%);
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+main .links-container .link-input-container input {
+  padding: 1rem;
+  width: 100%;
+  border-radius: 10px;
+  border: none;
+  margin-bottom: 1rem;
+}
+main .links-container .link-input-container button {
+  width: 100%;
+  margin: 0;
+  padding: 0.7rem 0;
+  text-align: center;
+  border-radius: 10px;
+}
+main .links-container .short-links-container {
+  margin-bottom: 2rem;
+}
+main .links-container .short-links-container .short-link-group {
+  background-color: #fff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+main .links-container .short-links-container .short-link-group .user-link {
+  margin: 1rem;
+}
+main .links-container .short-links-container .short-link-group .short-link-display {
+  margin: 1rem 0 0.5rem 1rem;
+}
+main .links-container .short-links-container .short-link-group a {
+  text-decoration: none;
+  color: hsl(180, 66%, 49%);
+}
+main .links-container .short-links-container .short-link-group a:hover {
+  cursor: pointer;
+}
+main .links-container .short-links-container .short-link-group button {
+  text-align: center;
+  border-radius: 10px;
+}
+main .statistics-container {
+  text-align: center;
+}
+main .statistics-container .card {
+  background-color: #fff;
+  margin: 4rem 0;
+  border-radius: 10px;
+  padding: 4rem 1rem 1rem;
+  position: relative;
+}
+main .statistics-container .icon-container {
+  position: absolute;
+  bottom: 75%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0.5rem;
+  background-color: hsl(257, 27%, 26%);
+  border-radius: 50%;
+  height: 70px;
+  width: 70px;
+}
+main .statistics-container .icon-container img {
+  height: 80%;
+  width: 80%;
+}
+
+footer {
+  text-align: center;
+  background-color: #35323e;
+  color: #fff;
+}
+footer .footer-links-container {
+  padding: 3rem 0;
+}
+footer .footer-links-container img {
+  fill: #fff;
+}
+footer .boost {
+  background-image: url("../images/bg-boost-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: hsl(257, 27%, 26%);
+  padding: 4rem 0;
+}
+footer ul {
+  list-style: none;
+}
+footer a {
+  color: hsl(0, 0%, 75%);
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+footer a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+footer h4 {
+  margin: 1rem 0;
+}
+footer .footer-links {
+  margin: 2rem 0;
+}
+footer .social-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}/*# sourceMappingURL=styles.css.map */
