@@ -1,4 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap");
+@keyframes mobile-menu-slide-in {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -16,7 +26,7 @@ button {
 }
 button:hover {
   cursor: pointer;
-  background-color: hsl(180, 92%, 75%);
+  background-color: hsl(180, 73%, 64%);
 }
 
 html {
@@ -63,6 +73,7 @@ header nav .mobile-submenu-container .mobile-submenu {
   text-align: center;
   line-height: 3rem;
   background-color: hsl(257, 27%, 26%);
+  animation: mobile-menu-slide-in 0.25s ease-in-out;
 }
 header nav .mobile-submenu-container .mobile-submenu hr {
   margin: 1.5rem 0;
@@ -85,7 +96,6 @@ header nav .mobile-submenu-container .mobile-submenu ul button {
   width: 100%;
   margin: 0;
   padding: 0;
-  border-radius: 10px;
 }
 header nav .mobile-submenu-container .mobile-submenu-active {
   display: block;
@@ -163,12 +173,15 @@ main .statistics-container .card {
   background-color: #fff;
   margin: 4rem 0;
   border-radius: 10px;
-  padding: 4rem 1rem 1rem;
+  padding: 4rem 2rem 2rem;
   position: relative;
+}
+main .statistics-container .card h3 {
+  margin-bottom: 1rem;
 }
 main .statistics-container .icon-container {
   position: absolute;
-  bottom: 75%;
+  top: -30px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -204,6 +217,10 @@ footer .boost {
   background-color: hsl(257, 27%, 26%);
   padding: 4rem 0;
 }
+footer .boost button {
+  margin: 2rem 0;
+  padding: 1rem 2rem;
+}
 footer ul {
   list-style: none;
 }
@@ -215,6 +232,7 @@ footer a {
 footer a:hover {
   cursor: pointer;
   text-decoration: underline;
+  color: hsl(180, 66%, 49%);
 }
 footer h4 {
   margin: 1rem 0;
@@ -227,4 +245,115 @@ footer .social-media {
   justify-content: center;
   align-items: center;
   gap: 20px;
+}
+footer .social-media .social-media-icon {
+  transition: 0.25s ease;
+}
+footer .social-media .social-media-icon:hover path {
+  fill: hsl(180, 66%, 49%);
+}
+
+@media only screen and (min-width: 800px) {
+  header {
+    width: 80vw;
+  }
+  header nav .mobile-submenu-container {
+    display: none;
+  }
+  header nav .desktop-nav {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 20px;
+  }
+  header nav .desktop-nav a {
+    text-decoration: none;
+    color: hsl(257, 7%, 63%);
+    transition: 0.25s ease;
+  }
+  header nav .desktop-nav a:hover {
+    cursor: pointer;
+    color: #35323e;
+  }
+  main {
+    width: 80vw;
+  }
+  main .statistics-container .advanced-statistics {
+    margin: 5rem 0;
+  }
+  main .statistics-container .advanced-statistics h3 {
+    font-size: 4rem;
+  }
+  main .statistics-container .advanced-statistics p {
+    font-size: 18px;
+  }
+  main .introduction {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+  main .introduction .get-started {
+    width: 50%;
+    text-align: left;
+  }
+  main .introduction .get-started h2 {
+    font-size: 5rem;
+    font-weight: 700;
+    line-height: 6rem;
+  }
+  main .introduction .get-started p {
+    font-size: 18px;
+  }
+  main .introduction .get-started button {
+    margin: 1rem 0;
+  }
+  main .introduction img {
+    width: 50%;
+  }
+  main .links-container .link-input-container {
+    padding: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  main .links-container .link-input-container input {
+    width: 80%;
+    margin: 0;
+    padding: 1.5rem;
+  }
+  main .links-container .link-input-container button {
+    width: 20%;
+    padding: 1.3rem;
+  }
+  .cards-container {
+    display: flex;
+    gap: 30px;
+    margin-top: 5rem;
+    margin-bottom: 10rem;
+  }
+  .cards-container .card {
+    text-align: left;
+  }
+  .cards-container .detailed-records {
+    transform: translateY(50px);
+  }
+  .cards-container .fully-customizable {
+    transform: translateY(100px);
+  }
+}
+footer .boost {
+  background-image: url(../images/bg-boost-desktop.svg);
+}
+footer .footer-links-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 5rem 8rem;
+}
+footer .footer-links-container .footer-links {
+  margin: 0;
+}
+footer .footer-links-container .footer-links h4 {
+  margin: 0 0 1rem;
 }/*# sourceMappingURL=styles.css.map */
