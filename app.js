@@ -35,7 +35,9 @@ const shortenUrl = async () => {
 
       let html = "";
 
-      html += `<div class="short-link-group">
+      html += `
+      <div class="short-link-group">
+      <button class="delete-button">X</button>
         <a href="${data.result.original_link}" target="_blank" class="user-link">${data.result.original_link}</a>
         <hr />
         <div>
@@ -63,6 +65,18 @@ const shortenUrl = async () => {
 
   copyButton.forEach((button) => {
     button.addEventListener("click", copyLink);
+  });
+
+  const deleteButtons = document.querySelectorAll(".delete-button");
+
+  const deleteLink = (event) => {
+    const deleteButton = event.target;
+    const shortLinkGroup = deleteButton.closest(".short-link-group");
+    shortLinkGroup.remove();
+  };
+
+  deleteButtons.forEach((button) => {
+    button.addEventListener("click", deleteLink);
   });
 };
 

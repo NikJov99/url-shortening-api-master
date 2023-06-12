@@ -177,6 +177,7 @@ main .links-container .short-links-container .short-link-group {
   display: flex;
   flex-direction: column;
   margin-bottom: 1rem;
+  position: relative;
 }
 main .links-container .short-links-container .short-link-group .user-link {
   margin: 1rem;
@@ -196,6 +197,18 @@ main .links-container .short-links-container .short-link-group a:hover {
 main .links-container .short-links-container .short-link-group button {
   text-align: center;
   border-radius: 10px;
+}
+main .links-container .short-links-container .short-link-group .delete-button {
+  all: unset;
+  position: absolute;
+  color: hsl(180, 66%, 49%);
+  top: 10px;
+  right: 10px;
+  transition: 0.25s ease;
+}
+main .links-container .short-links-container .short-link-group .delete-button:hover {
+  cursor: pointer;
+  color: hsl(180, 73%, 64%);
 }
 main .statistics-container {
   text-align: center;
