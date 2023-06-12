@@ -176,8 +176,12 @@ main .links-container .short-links-container .short-link-group {
   border-radius: 10px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   margin-bottom: 1rem;
   position: relative;
+}
+main .links-container .short-links-container .short-link-group hr {
+  display: inline;
 }
 main .links-container .short-links-container .short-link-group .user-link {
   margin: 1rem;
@@ -338,6 +342,14 @@ footer .social-media .social-media-icon:hover path {
   }
   main {
     width: 70vw;
+  }
+  main .links-container .short-links-container .short-link-group {
+    display: flex;
+    flex-direction: row;
+    padding: 0 2rem;
+  }
+  main .links-container .short-links-container .short-link-group hr {
+    display: none;
   }
   main .statistics-container .advanced-statistics {
     margin: 5rem 0;

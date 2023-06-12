@@ -197,8 +197,13 @@ main {
         border-radius: 10px;
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
         margin-bottom: 1rem;
         position: relative;
+
+        hr {
+          display: inline;
+        }
 
         .user-link {
           margin: 1rem;
@@ -396,6 +401,19 @@ footer {
 
   main {
     width: 70vw;
+
+    .links-container {
+      .short-links-container {
+        .short-link-group {
+          display: flex;
+          flex-direction: row;
+          padding: 0 2rem;
+          hr {
+            display: none;
+          }
+        }
+      }
+    }
 
     .statistics-container {
       .advanced-statistics {
