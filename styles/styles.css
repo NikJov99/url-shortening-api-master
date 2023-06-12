@@ -142,6 +142,26 @@ main .links-container .link-input-container input::placeholder {
 main .links-container .link-input-container input:focus {
   outline: solid 2px hsl(180, 66%, 49%);
 }
+main .links-container .link-input-container .error {
+  outline: solid 2px red;
+  transition: 0.25s ease;
+}
+main .links-container .link-input-container .error:focus {
+  outline: solid 2px red;
+}
+main .links-container .link-input-container .error::-moz-placeholder {
+  color: red;
+}
+main .links-container .link-input-container .error::placeholder {
+  color: red;
+}
+main .links-container .link-input-container .error-msg {
+  color: red;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  transition: 0.25s ease;
+}
 main .links-container .link-input-container button {
   width: 100%;
   margin: 0;
