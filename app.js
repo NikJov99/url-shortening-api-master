@@ -37,7 +37,6 @@ const shortenUrl = async () => {
 
       html += `
       <div class="short-link-group">
-      <button class="delete-button">X</button>
         <a href="${data.result.original_link}" target="_blank" class="user-link">${data.result.original_link}</a>
         <hr />
         <div>
@@ -54,29 +53,20 @@ const shortenUrl = async () => {
     errorMsg.innerHTML = "invalid link or server error";
   }
 
-  const copyButton = document.querySelectorAll(".copy-button");
+  const copyButtons = document.querySelectorAll(".copy-button");
   const shortUrl = document.querySelector(".short-link-display");
 
   const copyLink = (event) => {
     const button = event.target;
     const shortUrl = button.previousElementSibling;
     navigator.clipboard.writeText(shortUrl.innerHTML);
+
+    button.style.backgroundColor = "#3b3054";
+    button.textContent = "Copied!";
   };
 
-  copyButton.forEach((button) => {
+  copyButtons.forEach((button) => {
     button.addEventListener("click", copyLink);
-  });
-
-  const deleteButtons = document.querySelectorAll(".delete-button");
-
-  const deleteLink = (event) => {
-    const deleteButton = event.target;
-    const shortLinkGroup = deleteButton.closest(".short-link-group");
-    shortLinkGroup.remove();
-  };
-
-  deleteButtons.forEach((button) => {
-    button.addEventListener("click", deleteLink);
   });
 };
 

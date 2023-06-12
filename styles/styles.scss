@@ -199,7 +199,6 @@ main {
         flex-direction: column;
         justify-content: space-between;
         margin-bottom: 1rem;
-        position: relative;
 
         hr {
           display: inline;
@@ -227,20 +226,6 @@ main {
         button {
           text-align: center;
           border-radius: 10px;
-        }
-
-        .delete-button {
-          all: unset;
-          position: absolute;
-          color: $cyan;
-          top: 10px;
-          right: 10px;
-          transition: 0.25s ease;
-
-          &:hover {
-            cursor: pointer;
-            color: $lightCyan;
-          }
         }
       }
     }
