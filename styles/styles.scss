@@ -150,6 +150,7 @@ main {
         border-radius: 10px;
         border: none;
         margin-bottom: 1rem;
+        transition: 0.25s ease;
 
         &::placeholder {
           font-family: "Poppins", sans-serif;
@@ -162,7 +163,6 @@ main {
 
       .error {
         outline: solid 2px red;
-        transition: 0.25s ease;
 
         &:focus {
           outline: solid 2px red;
@@ -178,7 +178,6 @@ main {
         text-align: center;
         text-transform: uppercase;
         margin-bottom: 1rem;
-        transition: 0.25s ease;
       }
 
       button {
@@ -198,9 +197,11 @@ main {
         border-radius: 10px;
         display: flex;
         flex-direction: column;
+        margin-bottom: 1rem;
 
         .user-link {
           margin: 1rem;
+          color: #000;
         }
 
         .short-link-display {
@@ -213,6 +214,7 @@ main {
 
           &:hover {
             cursor: pointer;
+            text-decoration: underline;
           }
         }
 

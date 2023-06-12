@@ -9,11 +9,9 @@ const toggleMobileMenu = () => {
 
 toggleMobileMenuButton.addEventListener("click", toggleMobileMenu);
 
-const displayUrl = (e) => {
+form.addEventListener("submit", (e) => {
   e.preventDefault();
-};
-
-form.addEventListener("submit", displayUrl);
+});
 
 const shortenUrl = async () => {
   const userInput = document.querySelector("input");
@@ -35,10 +33,10 @@ const shortenUrl = async () => {
 
       console.log(data);
 
-      let html;
+      let html = "";
 
       html += `<div class="short-link-group">
-        <p class="user-link">${data.result.original_link}</p>
+        <a href="${data.result.original_link}" target="_blank" class="user-link">${data.result.original_link}</a>
         <hr />
         <div>
           <a href="${data.result.short_link}" target="_blank" class="short-link-display">${data.result.short_link}</a>
@@ -51,16 +49,21 @@ const shortenUrl = async () => {
       linkContainer.innerHTML += html;
     }
   } catch (error) {
-    console.log(error);
+    errorMsg.innerHTML = "invalid link or server error";
   }
+
+  const copyButton = document.querySelectorAll(".copy-button");
+  const shortUrl = document.querySelector(".short-link-display");
+
+  const copyLink = (event) => {
+    const button = event.target;
+    const shortUrl = button.previousElementSibling;
+    navigator.clipboard.writeText(shortUrl.innerHTML);
+  };
+
+  copyButton.forEach((button) => {
+    button.addEventListener("click", copyLink);
+  });
 };
 
 submitButton.addEventListener("click", shortenUrl);
-
-const copyButton = document.querySelector(".copy-button");
-
-const copyLink = () => {
-  navigator.clipboard.writeText(item.value);
-};
-
-copyButton.addEventListener("click", copyLink);

@@ -132,6 +132,7 @@ main .links-container .link-input-container input {
   border-radius: 10px;
   border: none;
   margin-bottom: 1rem;
+  transition: 0.25s ease;
 }
 main .links-container .link-input-container input::-moz-placeholder {
   font-family: "Poppins", sans-serif;
@@ -144,7 +145,6 @@ main .links-container .link-input-container input:focus {
 }
 main .links-container .link-input-container .error {
   outline: solid 2px red;
-  transition: 0.25s ease;
 }
 main .links-container .link-input-container .error:focus {
   outline: solid 2px red;
@@ -160,7 +160,6 @@ main .links-container .link-input-container .error-msg {
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 1rem;
-  transition: 0.25s ease;
 }
 main .links-container .link-input-container button {
   width: 100%;
@@ -177,9 +176,11 @@ main .links-container .short-links-container .short-link-group {
   border-radius: 10px;
   display: flex;
   flex-direction: column;
+  margin-bottom: 1rem;
 }
 main .links-container .short-links-container .short-link-group .user-link {
   margin: 1rem;
+  color: #000;
 }
 main .links-container .short-links-container .short-link-group .short-link-display {
   margin: 1rem 0 0.5rem 1rem;
@@ -190,6 +191,7 @@ main .links-container .short-links-container .short-link-group a {
 }
 main .links-container .short-links-container .short-link-group a:hover {
   cursor: pointer;
+  text-decoration: underline;
 }
 main .links-container .short-links-container .short-link-group button {
   text-align: center;
